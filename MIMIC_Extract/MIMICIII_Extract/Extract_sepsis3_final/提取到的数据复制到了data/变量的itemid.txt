@@ -1,0 +1,329 @@
+原始的提取中：
+87个itemid：
+labitems_to_keep={'51444', '51362', '50863', '51446', '50960', '51491', '50831', '50882', '51094', '51279', '50907', '50806', '50868', '50811', '51427', '51214', '51102', '51249', '50817', '50813', '51003', '51375', '51127', '50905', '51419', '50809', '51237', '50841', '51002', '51054', '50835', '51343', '51274', '51457', '51256', '51355', '50971', '51275', '51052', '51301', '51265', '50862', '50884', '50803', '50954', '51300', '50820', '50885', '51222', '51254', '51069', '50861', '51006', '51077', '51114', '51146', '50970', '50883', '51248', '51250', '50818', '51046', '50824', '50819', '51493', '51082', '51032', '50912', '50822', '51516', '50826', '51347', '50904', '50804', '50931', '51245', '51244', '50902', '50808', '50878', '51143', '51116', '51078', '50810', '50983', '50893', '51221'}
+216个itemid：
+chartitems_to_keep={['220274', '833', '220059', '225625', '1535', '226531', '791', '8502', '8506', '803', '220635', '456', '224685', '683', '506', '777', '3316', '3317', '789', '225664', '3582', '220277', '778', '223830', '227467', '223835', '6701', '220546', '224643', '8440', '224167', '827', '535', '226707', '227243', '860', '227456', '3320', '227465', '1673', '813', '224422', '619', '3581', '676', '116', '859', '543', '646', '8368', '224700', '1522', '220621', '857', '3603', '224689', '815', '491', '861', '52', '770', '492', '113', '769', '3314', '773', '3654', '821', '220545', '220228', '115', '816', '684', '1286', '3580', '198', '3422', '788', '3737', '8504','1530', '220645', '781', '512', '1523', '220227', '224696', '772', '1529', '1521', '220603', '227442', '225309', '226512', '227468', '227464', '1126', '3321', '3322', '224', '3313', '442', '226536', '1162', '223679', '6702', '678', '3839', '763', '224695', '8507', '8441', '786', '3745', '3420', '8498', '225624', '504', '618', '89', '227429', '224639', '224322', '226537', '224686', '8555', '806', '223761', '220052', '727', '1127', '225690', '220181', '220180', '1538', '4202', '51', '220339', '829', '90', '615', '1531', '220615', '834', '224690', '4753', '828', '227457', '224684', '780', '814', '220210', '837', '225612', '227073', '8377', '220587', '1525', '851', '1532','220045', '3693', '220602', '1528', '3312', '1542', '787', '225651', '677', '225668', '220050', '818', '614', '811', '225312', '189', '779', '1533', '626', '849', '225698', '220179', '226062', '226534', '220051', '1524', '190', '825', '220235', '211', '679', '807', '227443', '3315', '1539', '220074', '682', '225667', '3323', '224688', '225310', '223762', '3655', '455', '1536', '225677', '1534', '1394', '227466', '824', '226730', '3348', '8503', '848', '220644', '651']}
+
+后面人工校对提取的：
+105个itemid：
+chartitems_to_keep_manual = set(['51', '52', '198', '211', '224', '442', '455', '456', '614', '615', '618', '619', '646', '651', '676', '677', '678', '679', '777', '778', '780', '781', '787', '788', '791', '807', '811', '813', '814', '815', '824', '825', '828', '829', '834',  '837', '857', '860', '861', '1126', '1127', '1162', '1286', '1523', '1525', '1529', '1530', '1533', '1535', '1536', '1542', '6701', '6702', '8368', '8440', '8441', '8555', '220045', '220050', '220051', '220052', '220179', '220180', '220181', '220210', '220227', '220228', '220235', '220274', '220277', '220545', '220546', '220602', '220615', '220621', '220645', '223679', '223761', '223762', '223830', '224167', '224322', '224422', '224643', '224688', '224689', '224690', '225309', '225310', '225312', '225624', '225664', '225698', '226062', '226534', '226536', '226537', '227073', '227243', '227443', '227457', '227464', '227465', '227466', '227467'])
+
+30个itemid：        
+labitems_to_keep_manual = set(['50804', '51275', '50803', '50912', '51222', '50882', '50824', '51221', '50983', '51078', '50931', '51274', '50868', '50806', '50810', '51301', '50820', '51006', '51300', '50818', '50811', '51127', '50813', '51237', '51265', '50831', '50817', '50809', '50822', '50971'])
+
+
+
+
+处理过程：
+('Alanine aminotransferase', 'count')  要
+('Alanine aminotransferase', 'mean')
+('Alanine aminotransferase', 'std')
+('Albumin', 'count')   要
+('Albumin', 'mean')
+('Albumin', 'std')
+('Albumin ascites', 'count')  
+('Albumin ascites', 'mean')
+('Albumin ascites', 'std')
+('Albumin pleural', 'count')
+('Albumin pleural', 'mean')
+('Albumin pleural', 'std')
+('Albumin urine', 'count')
+('Albumin urine', 'mean')
+('Albumin urine', 'std')
+('Alkaline phosphate', 'count')   要
+('Alkaline phosphate', 'mean')
+('Alkaline phosphate', 'std')
+('Anion gap', 'count')   要
+('Anion gap', 'mean')
+('Anion gap', 'std')
+('Asparate aminotransferase', 'count')   要
+('Asparate aminotransferase', 'mean')
+('Asparate aminotransferase', 'std')
+('Basophils', 'count')    要
+('Basophils', 'mean')
+('Basophils', 'std')
+('Bicarbonate', 'count')   要
+('Bicarbonate', 'mean')
+('Bicarbonate', 'std')
+('Bilirubin', 'count')   要
+('Bilirubin', 'mean')
+('Bilirubin', 'std')
+('Blood urea nitrogen', 'count')  要
+('Blood urea nitrogen', 'mean')
+('Blood urea nitrogen', 'std')
+('CO2', 'count')  要
+('CO2', 'mean')
+('CO2', 'std')
+('CO2 (ETCO2, PCO2, etc.)', 'count')   要
+('CO2 (ETCO2, PCO2, etc.)', 'mean')
+('CO2 (ETCO2, PCO2, etc.)', 'std')
+('Calcium', 'count')   要
+('Calcium', 'mean')
+('Calcium', 'std')
+('Calcium ionized', 'count')   要
+('Calcium ionized', 'mean')
+('Calcium ionized', 'std')
+('Calcium urine', 'count')    要
+('Calcium urine', 'mean')
+('Calcium urine', 'std')
+('Cardiac Index', 'count')  不要，chartevents，116,228368,7610
+('Cardiac Index', 'mean')
+('Cardiac Index', 'std')
+('Cardiac Output Thermodilution', 'count')  不要，chartevents，90
+('Cardiac Output Thermodilution', 'mean')
+('Cardiac Output Thermodilution', 'std')
+('Cardiac Output fick', 'count')   不要，chartevents，89
+('Cardiac Output fick', 'mean')
+('Cardiac Output fick', 'std')
+('Central Venous Pressure', 'count')   不要，chartevents，113,220074,1103
+('Central Venous Pressure', 'mean')
+('Central Venous Pressure', 'std')
+('Chloride', 'count')   要
+('Chloride', 'mean')
+('Chloride', 'std')
+('Chloride urine', 'count')   要
+('Chloride urine', 'mean')
+('Chloride urine', 'std')
+('Cholesterol', 'count')   不要,chartevents:789,1524,220603,3748;labevents:50840,51031,50907
+('Cholesterol', 'mean')
+('Cholesterol', 'std')
+('Cholesterol HDL', 'count')   不要,labevents:50904
+('Cholesterol HDL', 'mean')
+('Cholesterol HDL', 'std')
+('Cholesterol LDL', 'count')   不要,labevents:50905,50906
+('Cholesterol LDL', 'mean')
+('Cholesterol LDL', 'std')
+('Creatinine', 'count')   要
+('Creatinine', 'mean')
+('Creatinine', 'std')
+('Creatinine ascites', 'count')   要
+('Creatinine ascites', 'mean')
+('Creatinine ascites', 'std')
+('Creatinine body fluid', 'count')   要
+('Creatinine body fluid', 'mean')
+('Creatinine body fluid', 'std')
+('Creatinine pleural', 'count')   要
+('Creatinine pleural', 'mean')
+('Creatinine pleural', 'std')
+('Creatinine urine', 'count')   要
+('Creatinine urine', 'mean')
+('Creatinine urine', 'std')
+('Diastolic blood pressure', 'count')   要
+('Diastolic blood pressure', 'mean')
+('Diastolic blood pressure', 'std')
+('Eosinophils', 'count')   要
+('Eosinophils', 'mean')
+('Eosinophils', 'std')
+('Fibrinogen', 'count')   要，上面还没有
+('Fibrinogen', 'mean')
+('Fibrinogen', 'std')
+('Fraction inspired oxygen', 'count')  要，FiO2
+('Fraction inspired oxygen', 'mean')
+('Fraction inspired oxygen', 'std')
+('Fraction inspired oxygen Set', 'count')   要
+('Fraction inspired oxygen Set', 'mean')
+('Fraction inspired oxygen Set', 'std')
+('Glascow coma scale total', 'count')   要，GCS total
+('Glascow coma scale total', 'mean')
+('Glascow coma scale total', 'std')
+('Glucose', 'count')   要
+('Glucose', 'mean')
+('Glucose', 'std')
+('Heart Rate', 'count')   要
+('Heart Rate', 'mean')
+('Heart Rate', 'std')
+('Height', 'count')   不要,chartevents:226707,226730,1394
+('Height', 'mean')
+('Height', 'std')
+('Hematocrit', 'count')  要
+('Hematocrit', 'mean')
+('Hematocrit', 'std')
+('Hemoglobin', 'count')   要
+('Hemoglobin', 'mean')
+('Hemoglobin', 'std')
+('Lactate', 'count')   要
+('Lactate', 'mean')
+('Lactate', 'std')
+('Lactate dehydrogenase', 'count')   要
+('Lactate dehydrogenase', 'mean')
+('Lactate dehydrogenase', 'std')
+('Lactate dehydrogenase pleural', 'count')   要
+('Lactate dehydrogenase pleural', 'mean')
+('Lactate dehydrogenase pleural', 'std')
+('Lactic acid', 'count')    要
+('Lactic acid', 'mean')
+('Lactic acid', 'std')
+('Lymphocytes', 'count')   要
+('Lymphocytes', 'mean')
+('Lymphocytes', 'std')
+('Lymphocytes ascites', 'count')  要
+('Lymphocytes ascites', 'mean')
+('Lymphocytes ascites', 'std')
+('Lymphocytes atypical', 'count')   要
+('Lymphocytes atypical', 'mean')
+('Lymphocytes atypical', 'std')
+('Lymphocytes atypical CSL', 'count')   要
+('Lymphocytes atypical CSL', 'mean')
+('Lymphocytes atypical CSL', 'std')
+('Lymphocytes body fluid', 'count')   要
+('Lymphocytes body fluid', 'mean')
+('Lymphocytes body fluid', 'std')
+('Lymphocytes percent', 'count')   要
+('Lymphocytes percent', 'mean')
+('Lymphocytes percent', 'std')
+('Lymphocytes pleural', 'count')   要
+('Lymphocytes pleural', 'mean')
+('Lymphocytes pleural', 'std')
+('Magnesium', 'count')   要
+('Magnesium', 'mean')
+('Magnesium', 'std')
+('Mean blood pressure', 'count')   要
+('Mean blood pressure', 'mean')
+('Mean blood pressure', 'std')
+('Mean corpuscular hemoglobin', 'count')   MCH，要
+('Mean corpuscular hemoglobin', 'mean')
+('Mean corpuscular hemoglobin', 'std')
+('Mean corpuscular hemoglobin concentration', 'count')    MCHC，要
+('Mean corpuscular hemoglobin concentration', 'mean')
+('Mean corpuscular hemoglobin concentration', 'std')
+('Mean corpuscular volume', 'count')   MCV，要
+('Mean corpuscular volume', 'mean')
+('Mean corpuscular volume', 'std')
+('Monocytes', 'count')    要
+('Monocytes', 'mean')
+('Monocytes', 'std')
+('Monocytes CSL', 'count')   要
+('Monocytes CSL', 'mean')
+('Monocytes CSL', 'std')
+('Neutrophils', 'count')   要
+('Neutrophils', 'mean')
+('Neutrophils', 'std')
+('Oxygen saturation', 'count')   SaO2,要
+('Oxygen saturation', 'mean')
+('Oxygen saturation', 'std')
+('Partial pressure of carbon dioxide', 'count')   PaCO2，要
+('Partial pressure of carbon dioxide', 'mean')
+('Partial pressure of carbon dioxide', 'std')
+('Partial pressure of oxygen', 'count')    PaO2，要
+('Partial pressure of oxygen', 'mean')
+('Partial pressure of oxygen', 'std')
+('Partial thromboplastin time', 'count')   PPT，要
+('Partial thromboplastin time', 'mean')
+('Partial thromboplastin time', 'std')
+('Peak inspiratory pressure', 'count')   不要,chart:535,507,224695
+('Peak inspiratory pressure', 'mean')
+('Peak inspiratory pressure', 'std')
+('Phosphate', 'count')   要
+('Phosphate', 'mean')
+('Phosphate', 'std')
+('Phosphorous', 'count')   不要,chart:827,225677,1534
+('Phosphorous', 'mean')
+('Phosphorous', 'std')
+('Plateau Pressure', 'count')   不要,chart:543,224696
+('Plateau Pressure', 'mean')
+('Plateau Pressure', 'std')
+('Platelets', 'count')   要
+('Platelets', 'mean')
+('Platelets', 'std')
+('Positive end-expiratory pressure', 'count')   不要,chart:505,224700;lab:50819
+('Positive end-expiratory pressure', 'mean')
+('Positive end-expiratory pressure', 'std')
+('Positive end-expiratory pressure Set', 'count')    不要,chart:506,220339
+('Positive end-expiratory pressure Set', 'mean')
+('Positive end-expiratory pressure Set', 'std')
+('Post Void Residual', 'count')    不要,chart:512
+('Post Void Residual', 'mean')
+('Post Void Residual', 'std')
+('Potassium', 'count')   要
+('Potassium', 'mean')
+('Potassium', 'std')
+('Potassium serum', 'count')   要
+('Potassium serum', 'mean')
+('Potassium serum', 'std')
+('Prothrombin time INR', 'count')   INR(PT),要
+('Prothrombin time INR', 'mean')
+('Prothrombin time INR', 'std')
+('Prothrombin time PT', 'count')    PT,要
+('Prothrombin time PT', 'mean')
+('Prothrombin time PT', 'std')
+('Pulmonary Artery Pressure mean', 'count')  要
+('Pulmonary Artery Pressure mean', 'mean')
+('Pulmonary Artery Pressure mean', 'std')
+('Pulmonary Artery Pressure systolic', 'count')   要
+('Pulmonary Artery Pressure systolic', 'mean')
+('Pulmonary Artery Pressure systolic', 'std')
+('Pulmonary Capillary Wedge Pressure', 'count')   不要,chart:504,223771
+('Pulmonary Capillary Wedge Pressure', 'mean')
+('Pulmonary Capillary Wedge Pressure', 'std')
+('Red blood cell count', 'count')   要
+('Red blood cell count', 'mean')
+('Red blood cell count', 'std')
+('Red blood cell count CSF', 'count')   要
+('Red blood cell count CSF', 'mean')
+('Red blood cell count CSF', 'std')
+('Red blood cell count ascites', 'count')   要
+('Red blood cell count ascites', 'mean')
+('Red blood cell count ascites', 'std')
+('Red blood cell count pleural', 'count')   要
+('Red blood cell count pleural', 'mean')
+('Red blood cell count pleural', 'std')
+('Red blood cell count urine', 'count')   要
+('Red blood cell count urine', 'mean')
+('Red blood cell count urine', 'std')
+('Respiratory rate', 'count')   要
+('Respiratory rate', 'mean')
+('Respiratory rate', 'std')
+('Respiratory rate Set', 'count')   要
+('Respiratory rate Set', 'mean')
+('Respiratory rate Set', 'std')
+('Sodium', 'count')   要
+('Sodium', 'mean')
+('Sodium', 'std')
+('Systemic Vascular Resistance', 'count')   不要,chart:626
+('Systemic Vascular Resistance', 'mean')
+('Systemic Vascular Resistance', 'std')
+('Systolic blood pressure', 'count')   要
+('Systolic blood pressure', 'mean')
+('Systolic blood pressure', 'std')
+('Temperature', 'count')   要
+('Temperature', 'mean')
+('Temperature', 'std')
+('Tidal Volume Observed', 'count')   不要,chart:682,681,224685;lab:50826
+('Tidal Volume Observed', 'mean')
+('Tidal Volume Observed', 'std')
+('Tidal Volume Set', 'count')   不要,chart:683,224684
+('Tidal Volume Set', 'mean')
+('Tidal Volume Set', 'std')
+('Tidal Volume Spontaneous', 'count')   不要,chart:684,224686,3050,654,3083,3003,2402
+('Tidal Volume Spontaneous', 'mean')
+('Tidal Volume Spontaneous', 'std')
+('Total Protein', 'count')   不要,chart:849,1539
+('Total Protein', 'mean')
+('Total Protein', 'std')
+('Total Protein Urine', 'count')   不要,lab:51102
+('Total Protein Urine', 'mean')
+('Total Protein Urine', 'std')
+('Troponin-I', 'count')   要，TropI，上面还没有
+('Troponin-I', 'mean')
+('Troponin-I', 'std')
+('Troponin-T', 'count')   要，TropT，上面还没有
+('Troponin-T', 'mean')
+('Troponin-T', 'std')
+('Venous PvO2', 'count')   不要,chart:859
+('Venous PvO2', 'mean')
+('Venous PvO2', 'std')
+('Weight', 'count')   要
+('Weight', 'mean')
+('Weight', 'std')
+('White blood cell count', 'count')   要
+('White blood cell count', 'mean')
+('White blood cell count', 'std')
+('White blood cell count urine', 'count')   要
+('White blood cell count urine', 'mean')
+('White blood cell count urine', 'std')
+('pH', 'count')   要
+('pH', 'mean')
+('pH', 'std')
+('pH urine', 'count')   要
+('pH urine', 'mean')
+('pH urine', 'std')

@@ -1,0 +1,325 @@
+{
+  "name": "static_patient_data",
+  "title": "Static attributes of ICU patients extracted from MIMIC-III",
+  "description": "Includes demographics and info about hospital/ICU admissions",
+  "license": "The use of data is conditional on citing the original data sources.",
+  "resources": [
+    {
+      "name": "static_tabular_data",
+      "path": "static_data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "profile": "tabular-data-resource",
+      "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+      "schema": {
+        "fields": [
+          {
+            "name": "subject_id",
+            "description": "ID number for subject within PATIENTS table",
+            "type": "integer",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "hadm_id",
+            "description": "ID number for subject within ADMISSIONS table",
+            "type": "integer",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "icustay_id",
+            "description": "ID number for subject within ICUSTAYS table",
+            "type": "integer",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "intime",
+            "type": "datetime",
+            "description": "Datetime of subject's intake into ICU.",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "outtime",
+            "type": "datetime",
+            "description": "Datetime of subject's exit from ICU.",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "age",
+            "type": "number",
+            "description": "Age of patient at admission (in fractional years)",
+            "unit" : "year",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "gender",
+            "description": "Indicates subject gender. 'M'=male or 'F'=female.",
+            "type": "string",
+            "pandas_dtype": "category",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "is_male",
+            "type": "integer",
+            "description": "Indicates if subject is male. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "ethnicity",
+            "description": "Indicates subject ethnicity. Many human-readable categories/sub-categories.",
+            "type": "string",
+            "pandas_dtype": "category",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "race_white",
+            "type": "integer",
+            "description": "Indicates if subject is a white race. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "race_black",
+            "type": "integer",
+            "description": "Indicates if subject is a black race. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "race_yellow",
+            "type": "integer",
+            "description": "Indicates if subject is a yellow race. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "race_hispanic",
+            "type": "integer",
+            "description": "Indicates if subject is a hispanic race. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "race_other",
+            "type": "integer",
+            "description": "Indicates if subject is a other race. 1 if is, 0 otherwise."
+          },
+          {
+            "name": "weight",
+            "type": "number",
+            "description": "Weight of patient in ICU (in fractional years)"
+          },
+          {
+            "name": "deathtime",
+            "type": "datetime",
+            "description": "Datetime of subject's death. NaN if subject did not die.",
+            "constraints" : {
+                "required" : false
+            }
+          },
+          
+          {
+            "name": "icu_los",
+            "type": "number",
+            "description": "Length-of-stay in the ICU in days.",
+            "unit": "day",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "hosp_los",
+            "type": "number",
+            "description": "Length-of-stay in the hospital in days.",
+            "unit": "day",
+            "constraints" : {
+                "required" : true
+            }
+          },
+          {
+            "name": "admission_type",
+            "type": "string",
+            "description": "Category of admission: {'ELECTIVE', 'EMERGENCY', 'URGENT'}.",
+            "pandas_dtype": "category"
+          },
+          {
+            "name": "mort_icu",
+            "type": "integer",
+            "description": "Indicates if subject died in ICU. 1 if died, 0 otherwise.",
+            "pandas_dtype": "integer"
+          },
+          {
+            "name": "mort_hosp",
+            "type": "integer",
+            "description": "Indicates if subject died in hospital. 1 if died, 0 otherwise.",
+            "pandas_dtype": "integer"
+          },
+          {
+            "name": "thirtyday_expire_flag",
+            "type": "integer",
+            "description": "TODO ???",
+            "pandas_dtype": "integer"
+          },
+          {
+            "name": "congestive_heart_failure",
+            "type": "integer",
+            "description": "Did the patient with congestive_heart_failure?"
+          },
+          {
+            "name": "cardiac_arrhythmias",
+            "type": "integer",
+            "description": "Did the patient with cardiac_arrhythmias?"
+          },
+          {
+            "name": "valvular_disease",
+            "type": "integer",
+            "description": "Did the patient with valvular_disease?"
+          },
+          {
+            "name": "pulmonary_circulation",
+            "type": "integer",
+            "description": "Did the patient with pulmonary_circulation?"
+          },
+          {
+            "name": "peripheral_vascular",
+            "type": "integer",
+            "description": "Did the patient with peripheral_vascular?"
+          },
+          {
+            "name": "hypertension",
+            "type": "integer",
+            "description": "Did the patient with hypertension?"
+          },
+          {
+            "name": "paralysis",
+            "type": "integer",
+            "description": "Did the patient with paralysis?"
+          },
+          {
+            "name": "other_neurological",
+            "type": "integer",
+            "description": "Did the patient with other_neurological?"
+          },
+          {
+            "name": "chronic_pulmonary",
+            "type": "integer",
+            "description": "Did the patient with chronic_pulmonary?"
+          },
+          {
+            "name": "diabetes_uncomplicated",
+            "type": "integer",
+            "description": "Did the patient with diabetes_uncomplicated?"
+          },
+          {
+            "name": "diabetes_complicated",
+            "type": "integer",
+            "description": "Did the patient with diabetes_complicated?"
+          },
+          {
+            "name": "hypothyroidism",
+            "type": "integer",
+            "description": "Did the patient with hypothyroidism?"
+          },
+          {
+            "name": "renal_failure",
+            "type": "integer",
+            "description": "Did the patient with renal_failure?"
+          },
+          {
+            "name": "liver_disease",
+            "type": "integer",
+            "description": "Did the patient with liver_disease?"
+          },
+          {
+            "name": "peptic_ulcer",
+            "type": "integer",
+            "description": "Did the patient with peptic_ulcer?"
+          },
+          {
+            "name": "aids",
+            "type": "integer",
+            "description": "Did the patient with aids?"
+          },
+          {
+            "name": "lymphoma",
+            "type": "integer",
+            "description": "Did the patient with lymphoma?"
+          },
+          {
+            "name": "metastatic_cancer",
+            "type": "integer",
+            "description": "Did the patient with metastatic_cancer?"
+          },
+          {
+            "name": "solid_tumor",
+            "type": "integer",
+            "description": "Did the patient with solid_tumor?"
+          },
+          {
+            "name": "rheumatoid_arthritis",
+            "type": "integer",
+            "description": "Did the patient with rheumatoid_arthritis?"
+          },
+          {
+            "name": "coagulopathy",
+            "type": "integer",
+            "description": "Did the patient with coagulopathy?"
+          },
+          {
+            "name": "obesity",
+            "type": "integer",
+            "description": "Did the patient with obesity?"
+          },
+          {
+            "name": "weight_loss",
+            "type": "integer",
+            "description": "Did the patient with weight_loss?"
+          },
+          {
+            "name": "fluid_electrolyte",
+            "type": "integer",
+            "description": "Did the patient with fluid_electrolyte?"
+          },
+          {
+            "name": "blood_loss_anemia",
+            "type": "integer",
+            "description": "Did the patient with blood_loss_anemia?"
+          },
+          {
+            "name": "deficiency_anemias",
+            "type": "integer",
+            "description": "Did the patient with deficiency_anemias?"
+          },
+          {
+            "name": "alcohol_abuse",
+            "type": "integer",
+            "description": "Did the patient with alcohol_abuse?"
+          },
+          {
+            "name": "drug_abuse",
+            "type": "integer",
+            "description": "Did the patient with drug_abuse?"
+          },
+          {
+            "name": "psychoses",
+            "type": "integer",
+            "description": "Did the patient with psychoses?"
+          },
+          {
+            "name": "depression",
+            "type": "integer",
+            "description": "Did the patient with depression?"
+          }
+        ],
+      "missingValues": "nan",
+      "primaryKey": ["subject_id", "hadm_id", "icustay_id"]
+      }
+    }
+  ]
+}
